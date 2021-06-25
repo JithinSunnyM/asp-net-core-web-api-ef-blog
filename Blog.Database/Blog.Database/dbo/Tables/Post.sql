@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[Post] (
+    [POST_ID]      INT            IDENTITY (1, 1) NOT NULL,
+    [TITLE]        VARCHAR (2000) NULL,
+    [DESCRIPTION]  VARCHAR (MAX)  NULL,
+    [CATEGORY_ID]  INT            NULL,
+    [CREATED_DATE] DATETIME       NULL,
+    PRIMARY KEY CLUSTERED ([POST_ID] ASC),
+    FOREIGN KEY ([CATEGORY_ID]) REFERENCES [dbo].[Category] ([ID])
+);
+
